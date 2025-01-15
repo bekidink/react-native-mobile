@@ -27,12 +27,19 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./src/assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+       [
+         "expo-secure-store",
+         {
+           "configureAndroidBackup": true,
+           "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
+         }
+       ]
     ],
     "experiments": {
       "typedRoutes": true
