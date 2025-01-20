@@ -17,6 +17,7 @@
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
     "@homielab/react-native-auto-scroll": "^0.0.10",
+    "@r0b0t3d/react-native-collapsible": "^1.4.3",
     "@react-navigation/bottom-tabs": "^7.2.0",
     "@react-navigation/native": "^7.0.14",
     "axios": "^1.7.9",
