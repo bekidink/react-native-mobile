@@ -71,7 +71,7 @@ export default function CustomerLogin() {
       <View style={styles.container}>
         <CustomSafeArea>
           <ProductSlider />
-          <PanGestureHandler onHandlerStateChange={handleGesture}>
+          <PanGestureHandler >
             <Animated.ScrollView
               bounces={false}
               keyboardDismissMode={"on-drag"}
@@ -116,7 +116,7 @@ export default function CustomerLogin() {
                     onPress={handleAuth}
                     loading={loading}
                     title="Continue"
-                    disabled={phoneNumber.length != 10}
+                    disabled={phoneNumber.length != 9}
                   />
                 </View>
               </LinearGradient>

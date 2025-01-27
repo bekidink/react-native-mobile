@@ -1,10 +1,11 @@
 import { NoticeHeight } from "@/src/utils/Constants";
 import { FC } from "react";
 import { StyleSheet, View, Animated as RNAnimated } from "react-native";
-const NOTICE_HEIGHT = -(NoticeHeight + 12);
+import Notice from "./Notice";
+const NOTICE_HEIGHT = NoticeHeight + 12;
 const NoticeAnimation: FC<{
   noticePosition: any;
-  children: React.ReactElement;
+  children: React.ReactNode;
 }> = ({ noticePosition, children }) => {
   return (
     <View style={styles.container}>
@@ -13,15 +14,17 @@ const NoticeAnimation: FC<{
           styles.noticeContainer,
           { transform: [{ translateY: noticePosition }] },
         ]}
-      ></RNAnimated.View>
+      >
+        <Notice/>
+      </RNAnimated.View>
       <RNAnimated.View
         style={[
           styles.contentContainer,
           {
-            paddingTop: noticePosition.interpolate({
-              inputRange: [NOTICE_HEIGHT, 0],
-              outRange: [0, NOTICE_HEIGHT + 20],
-            }),
+            // paddingTop: noticePosition.interpolate({
+            //   inputRange: [NOTICE_HEIGHT, 0],
+            //   outRange: [0, NOTICE_HEIGHT + 20],
+            // }),
           },
         ]}
       >

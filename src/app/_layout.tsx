@@ -58,7 +58,7 @@ export default function RootLayout() {
       }
       return true;
     }
-    NavigationUtils.navigate("customerLogin");
+    NavigationUtils.navigate("dashboard");
     return false;
   };
   useEffect(() => {
@@ -84,7 +84,8 @@ export default function RootLayout() {
         <Stack>
           <Stack.Screen name="customerLogin" />
           <Stack.Screen name="deliveryLogin" />
-          <Stack.Screen name="dashboard" />
+          <Stack.Screen name="dashboard" options={{ headerShown: false }} />
+
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="+not-found" />
         </Stack>

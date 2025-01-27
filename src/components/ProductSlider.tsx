@@ -2,6 +2,7 @@ import React, { FC, useMemo } from "react";
 import { Image, StyleSheet, View } from "react-native";
 import { imageData } from "../utils/dummyData";
 import AutoScroll from "@homielab/react-native-auto-scroll";
+import { screenWidth } from "../utils/Constants";
 const ProductSlider = () => {
   const rows = useMemo(() => {
     const result = [];
@@ -12,7 +13,7 @@ const ProductSlider = () => {
   }, []);
   return (
     <View pointerEvents="none">
-      <AutoScroll duration={100} endPaddingWidth={0} style={styles.autoScroll}>
+      <AutoScroll duration={10000} endPaddingWidth={0} style={styles.autoScroll}>
         <View style={styles.gridController}>
           {rows?.map((row, index) => {
             return <MemoizedRow row={row} rowIndex={index} key={index} />;
@@ -52,8 +53,8 @@ const styles = StyleSheet.create({
   itemContainer: {
     marginHorizontal: 10,
     marginBottom: 12,
-    width: "100%",
-    height: "100%",
+    width: screenWidth * 0.26,
+    height: screenWidth * 0.26,
     backgroundColor: "#e9f7f8",
     justifyContent: "center",
     borderRadius: 25,

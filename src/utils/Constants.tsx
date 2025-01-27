@@ -27,7 +27,7 @@ export const lightColors = [
   "rgba(255,255,255,0.003)",
 ];
 
-export const darkWeatherColors = [
+export const darkWeatherColors: readonly [string, string, ...string[]] = [
   "rgba(54, 67, 92, 1)",
   "rgba(54, 67, 92, 0.9)",
   "rgba(54, 67, 92, 0.8)",
